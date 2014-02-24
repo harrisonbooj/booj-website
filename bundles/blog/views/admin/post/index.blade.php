@@ -30,7 +30,7 @@
                     <? foreach($posts->results as $post): ?>
                         <tr>
                             <td><?=$post->title;?> <a href="<?=$blog_url;?>/<?=$post->slug;?>" target="_blank" title="Go To Post"><i class="icon-circle-arrow-up"></i></a></td>
-                            <td><?=date('m-d-Y', strtotime($post->created_at));?></td>
+                            <td><?=date('m-d-Y', strtotime($post->published_at));?></td>
                             <td><? if ($post->is_published == 1) echo 'Published'; else echo 'Pending'; ?></td>
                             <td><?=$post->category->title;?></td>
                             <td>

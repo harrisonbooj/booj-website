@@ -23,7 +23,8 @@ class Blog_Install {
 			$table->integer('number_views')->unsigned()->default(0);
 			$table->integer('is_published')->unsigned()->default(1);
 			$table->timestamp('viewed_at');
-			$table->timestamp('event_date')->nullable();			
+			$table->timestamp('event_date')->nullable();
+			$table->date('published_at')->nullable()->default('0000-00-00 00:00:00');
 			$table->date('created_at')->nullable()->default('0000-00-00 00:00:00');
 			$table->date('updated_at')->nullable()->default('0000-00-00 00:00:00');
 		});

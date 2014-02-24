@@ -32,7 +32,10 @@ class Post extends Eloquent {
 
 		if (!empty($args['term'])) {
 			$results['term'] = $args['term'];
-			$results['posts'] = Post::where('is_published', '=', 1)->where('content', 'LIKE', '%' . $args['term'] . '%')->paginate(20);
+			$results['posts'] = Post::where('is_published', '=', 1)
+				->where('content', 'LIKE', '%' . $args['term'] . '%')
+				->where('published_at', '<=', new \DateTime)
+				->paginate(20);
 			return $results;
 		}
 		return FALSE;
@@ -76,8 +79,8 @@ class Post extends Eloquent {
 				$post->user_id = $args['user_id'];
 				$post->content = $args['content'];
 				$post->is_published = $args['is_published'] == 1 ? 1 : 0;
-				if (!empty($args['created_at'])) {
-					$post->created_at = $args['created_at'];
+				if (!empty($args['published_at'])) {
+					$post->published_at = $args['published_at'];
 				}
 				if (!empty($args['event_date'])) {
 					$post->event_date = $args['event_date'];
@@ -192,8 +195,8 @@ class Post extends Eloquent {
 			$post->user_id = $args['user_id'];
 			$post->content = $args['content'];
 			$post->is_published = $args['is_published'] == 1 ? 1 : 0;
-			if (!empty($args['created_at'])) {
-				$post->created_at = $args['created_at'];
+			if (!empty($args['published_at'])) {
+				$post->published_at = $args['published_at'];
 			}
 			if (!empty($args['event_date'])) {
 				$post->event_date = $args['event_date'];
@@ -277,7 +280,8 @@ class Post extends Eloquent {
 				->where('is_published', '=', 1)
 				->where('category_id', '=', $post->category->id)
 				->where('id', '!=', $post->id)
-				->order_by('created_at', 'DESC')
+				->where('published_at', '<=', new \DateTime)
+				->order_by('published_at', 'DESC')
 				->take(Config::get('Blog::blog.similar_category_count'))
 				->get()
 			;			
@@ -301,8 +305,9 @@ class Post extends Eloquent {
 						if (!empty($valid_ids)) {
 							$similar_by_tags = Post::with(array('category', 'tags', 'user'))
 								->where('is_published', '=', 1)
+								->where('published_at', '<=', new \DateTime)
 								->where_in('id', $valid_ids)
-								->order_by('created_at', 'DESC')
+								->order_by('published_at', 'DESC')
 								->get()
 							;
 						}
@@ -310,24 +315,27 @@ class Post extends Eloquent {
 				}
 			}
 
-			$previous = Post::where('created_at', '<', $post->created_at)
+			$previous = Post::where('published_at', '<', $post->published_at)
 				->where('is_published', '=', 1)
 				->where('id', '!=', $post->id)
-				->order_by('created_at', 'DESC')
+				->where('published_at', '<=', new \DateTime)
+				->order_by('published_at', 'DESC')
 				->take(1)
 				->get()
 			;
 
-			$next = Post::where('created_at', '>', $post->created_at)
+			$next = Post::where('published_at', '>', $post->published_at)
 				->where('is_published', '=', 1)
 				->where('id', '!=', $post->id)
-				->order_by('created_at', 'ASC')
+				->where('published_at', '<=', new \DateTime)
+				->order_by('published_at', 'ASC')
 				->take(1)
 				->get()
 			;
 
 			$random = Post::where('id', '!=', $post->id)
 				->where('is_published', '=', 1)
+				->where('published_at', '<=', new \DateTime)
 				->order_by(DB::raw(''), DB::raw('RAND()'))
 				->take(1)
 				->get()
@@ -358,7 +366,12 @@ class Post extends Eloquent {
 			return Cache::get($key);
 		}
 
-		$post = Post::where('is_published', '=', 1)->order_by('viewed_at', 'DESC')->order_by('number_views', 'DESC')->take($count)->get();
+		$post = Post::where('is_published', '=', 1)
+			->where('published_at', '<=', new \DateTime)
+			->order_by('viewed_at', 'DESC')
+			->order_by('number_views', 'DESC')
+			->take($count)
+			->get();
 		
 		if ($post) {
 			Cache::put($key, $post, 120);
@@ -372,7 +385,8 @@ class Post extends Eloquent {
 		$posts = Post::with('category', 'user')
 			->where('is_published', '=', 1)
 			->where('user_id', '=', $id)
-			->order_by('created_at', 'DESC')
+			->where('published_at', '<=', new \DateTime)
+			->order_by('published_at', 'DESC')
 			->paginate($count)
 		;
 		if ($posts) {
@@ -387,8 +401,9 @@ class Post extends Eloquent {
 			$count = Config::get('Blog::blog.posts_per_page');
 		}
 		return Post::with(array('category', 'user'))
-			->order_by('created_at', 'DESC')
 			->where('is_published', '=', 1)
+			->where('published_at', '<=', new \DateTime)
+			->order_by('published_at', 'DESC')
 			->paginate($count)
 		;
 	}
@@ -396,7 +411,7 @@ class Post extends Eloquent {
 	public static function get_posts_for_admin()
 	{
 		return Post::with(array('category', 'tags'))
-			->order_by('created_at', 'DESC')
+			->order_by('published_at', 'DESC')
 			->paginate(20)
 		;
 	}

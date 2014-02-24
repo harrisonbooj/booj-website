@@ -57,7 +57,7 @@
 										<a href="<?=$action_urls['blog'];?>/<?=$post->slug;?>" title="<?=$post->short_title;?>"><?=$post->short_title;?></a>
 									</h2>
 									<p class="post-landing-author">
-										<?=date('F jS, Y', strtotime($post->created_at));?>
+										<?=date('F jS, Y', strtotime($post->published_at));?>
 										<? if (!empty($post->user)): ?>
 											 // by <a href="<?=$action_urls['author'];?>/<?=$post->user->username;?>" title="View profile for <?=$post->user->first_name;?> <?=$post->user->last_name;?>">+ <?=$post->user->first_name;?> <?=$post->user->last_name;?></a>
 										<? endif; ?>

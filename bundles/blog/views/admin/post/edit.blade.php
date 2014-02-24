@@ -69,11 +69,11 @@ if (typeof CKEDITOR === 'object') {
                     </div>
                 </div>
 
-                <div class="control-group{{ isset($errors) && $errors->has('created_at') ? ' error' : '' }}">
-                    <?=Form::label('created_at', 'Published Date *', array('class' => 'control-label')); ?>
+                <div class="control-group{{ isset($errors) && $errors->has('published_at') ? ' error' : '' }}">
+                    <?=Form::label('published_at', 'Published Date *', array('class' => 'control-label')); ?>
                     <div class="controls">
-                        <?=Form::text('created_at', Input::old('created_at') ? Input::old('created_at') : $post->created_at, array('class' => 'span6 date-widget', 'required' => 'required', 'placeholder' => 'Enter Date Published')); ?>
-                        @if ($errors && $errors->has('created_at'))
+                        <?=Form::text('published_at', Input::old('published_at') ? Input::old('published_at') : $post->published_at, array('class' => 'span6 date-widget', 'required' => 'required', 'placeholder' => 'Enter Date Published')); ?>
+                        @if ($errors && $errors->has('published_at'))
                             <span class="help-inline">This field is required</span>
                         @endif
                         <span class="help-block">format: yyyy-mm-dd</span>
@@ -106,6 +106,37 @@ if (typeof CKEDITOR === 'object') {
                         <div class="alert alert-block">For a reference on what markup to use and all the style resources visit <a href="http://www.getbootstrap.com" target="_blank">www.getbootstrap.com</a> and navigate to the <strong>Base CSS page</strong></div>
                     </div>
                 </div>
+
+                <div class="control-group">
+					<div class="controls">
+						<div class="alert alert-info alert-block">
+							<strong>Writing code samples for your post and want syntax highlighting?</strong><br>
+							Your code will need to be encased in both a &lt;pre&gt; and a &lt;code&gt; tag for the highlighting to work. You will also need to specify the language your code is in, encode &lt; and &gt; symbols with the proper &amp; encoding, as well as add a couple of classes to add support for line numbering.
+							Please reference the example below for what the code block should look like.<br>
+							<br>
+							<strong>Example (for HTML):</strong><br>
+							<pre>
+&lt;pre class="prettyprint linenums"&gt;
+    &lt;code class="lang-html"&gt;
+        &amp;lt;div class="row"&amp;gt;
+            &amp;lt;div class="col-sm-6"&amp;gt;
+                &amp;lt;p&amp;gt;
+                    This is some text inside the paragraph.
+                &amp;lt;/p&amp;gt;
+            &amp;lt;/div&amp;gt;
+            &amp;lt;div class="col-sm-6"&amp;gt;
+                &amp;lt;img src="/images/test.jpg" alt="Test Image"&amp;gt;
+            &amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &lt;/code&gt;
+&lt;/pre&gt;
+							</pre>
+							You can change the HTML portion of <strong>class="lang-html"</strong> to "js" or "css" if your language is JS or CSS instead of HTML. To turn off line numbering, remove the <strong>linenums</strong> class from the &lt;pre&gt; tag.<br>
+							Please see the <a href="http://google-code-prettify.googlecode.com/svn/trunk/README.html" target="_blank">Google Code Prettify documentation</a> for more information on the syntax highlighting library. Also, please note that changing
+							the skin (color theme) away from the blog default is not supported at this time.
+						</div>
+					</div>
+				</div>
 
                 <div class="control-group{{ isset($errors) && $errors->has('user_id') ? ' error' : '' }}">
                     <?php echo Form::label('user_id', 'Author *', array('class' => 'control-label')); ?>

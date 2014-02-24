@@ -61,7 +61,7 @@ class Blog_Admin_Post_Controller extends Admin_Base_Controller {
 			'small_photo' => 'required|mimes:jpg,gif,png,jpeg',
 			'category_id' => 'required',
 			'is_published' => 'required',
-			'created_at' => 'required',
+			'published_at' => 'required',
 			'user_id' => 'required',
 		);
 
@@ -133,7 +133,7 @@ class Blog_Admin_Post_Controller extends Admin_Base_Controller {
 			'category_id' => 'required',
 			'user_id' => 'required',
 			'is_published' => 'required',
-			'created_at' => 'required',
+			'published_at' => 'required',
 			'slug' => 'required|unique:posts,slug,' . $id,
 		);
 

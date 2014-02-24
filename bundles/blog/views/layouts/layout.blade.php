@@ -19,10 +19,13 @@
         <link href='http://fonts.googleapis.com/css?family=Roboto:300,300italic' rel='stylesheet' type='text/css'>
         <link href="/css/filters.<? if(!empty($build_version)) echo $build_version . '.';?>css" rel="stylesheet">
         <link href="/dist/style.min.<? if(!empty($build_version)) echo $build_version . '.';?>css" rel="stylesheet">
+		{{-- Syntax Highlighting CSS --}}
+		<link href="/dist/google-code-prettify/sons-of-obsidian.css" rel="stylesheet">
+
         {{ Asset::styles() }}
         @yield('styles')
     </head>
-    <body class="blog-layout">
+    <body class="blog-layout" onload="prettyPrint()">
         <header id="blog-header">
             <div class="container">
                 <div class="row-fluid">
@@ -90,6 +93,10 @@
         <div id="fb-root"></div>
 
         <script src="/dist/app.min.<? if(!empty($build_version)) echo $build_version . '.';?>js"></script>
+
+		{{-- Google Code Prettify Syntax Highlighter  --}}
+		<script src="/dist/google-code-prettify/prettify.js"></script>
+		<script src="/dist/google-code-prettify/lang-css.js"></script>
         {{ Asset::scripts() }}
         @yield('scripts')
 

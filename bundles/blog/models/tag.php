@@ -128,7 +128,12 @@ class Tag extends Eloquent {
 		if ($slug) {
 			$tag = Tag::get_tag_by_slug($slug);
 			if ($tag) {
-				$posts = $tag->posts()->where('is_published', '=', 1)->order_by('created_at', 'DESC')->paginate($num);
+				$posts = $tag
+					->posts()
+					->where('is_published', '=', 1)
+					->where('posted_at', '<=', new \DateTime)
+					->order_by('posted_at', 'DESC')
+					->paginate($num);
 				$data = array(
 					'tag' => $tag,
 					'posts' => $posts,
