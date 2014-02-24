@@ -60,7 +60,7 @@
 						<h1 class="font-30 margin-0">{{ $data['post']->title }}</h1>
 						
 						<div class="post-top-meta">
-							<? echo date('n/j/Y', strtotime($data['post']->created_at)); ?>
+							<? echo date('n/j/Y', strtotime($data['post']->published_at)); ?>
 							<? if (!empty($data['post']->user)): ?>
 								 // by <a href="<?=$action_urls['author'];?>/<?=$data['post']->user->username;?>" title="View profile for <?=$data['post']->user->first_name;?> <?=$data['post']->user->last_name;?>">+<?=$data['post']->user->first_name;?> <?=$data['post']->user->last_name;?></a>
 							<? endif; ?>
