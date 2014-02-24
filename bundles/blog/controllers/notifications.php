@@ -40,17 +40,24 @@ class Blog_Notifications_Controller extends Blog_Base_Controller {
 
         $comment = $results->response->raw_message;
 
-        $headers  = 'MIME-Version: 1.0' . "\r\n";
-        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-        $headers .= 'From:' . Config::get('Admin::admin.admin_email') . '\r\n';
-
         $subject = Config::get('Blog::blog.blog_name') . ': New comment on ' . $thread->title;
 
-        $message = '<h3>' . Config::get('Blog::blog.blog_name') . ' Comment</h3><h3>A comment was posted on <a href="' . $thread->link . '#comment-' . $commentId . '">' . $thread->title . '</a></h3><p>' . $author->name . ' wrote:</p><blockquote>' . $comment .'</blockquote><p><a href="http://' . $results->response->forum . '.disqus.com/admin/moderate/#/approved/search/id:' . $commentId . '">Moderate comment</a></p>';
+		$messageHTML = '<h3>' . Config::get('Blog::blog.blog_name') . ' Comment</h3><h3>A comment was posted on <a href="' . $thread->link . '#comment-' . $commentId . '">' . $thread->title . '</a></h3><p>' . $author->name . ' wrote:</p><blockquote>' . $comment .'</blockquote><p><a href="http://' . $results->response->forum . '.disqus.com/admin/moderate/#/approved/search/id:' . $commentId . '">Moderate comment</a></p>';
 
-        $postAuthor = $postAuthor . ', marketing@booj.com';
-        
-        mail($postAuthor,$subject,$message,$headers);
+		// Begin SwiftMailer Building
+		Bundle::start('swiftmailer');
+
+		// Get the instance
+		$mailer = IoC::resolve('mailer');
+
+		// Construct the message
+		$message = Swift_Message::newInstance($subject)
+			->setFrom(array(Config::get('Admin::admin.admin_email') => Config::get('Admin::admin.admin_name')))
+			->setTo(array($postAuthor => $post->user->first_name . ' ' . $post->user->last_name, 'marketing@booj.com' => 'Booj Marketing'))
+			->setBody($messageHTML, 'text/html');
+
+		// Send the email
+		$mailer->send($message);
 
         return Response::json(array('success' => 'true'));
     }
