@@ -131,8 +131,8 @@ class Tag extends Eloquent {
 				$posts = $tag
 					->posts()
 					->where('is_published', '=', 1)
-					->where('posted_at', '<=', new \DateTime)
-					->order_by('posted_at', 'DESC')
+					->where('published_at', '<=', new \DateTime)
+					->order_by('published_at', 'DESC')
 					->paginate($num);
 				$data = array(
 					'tag' => $tag,
