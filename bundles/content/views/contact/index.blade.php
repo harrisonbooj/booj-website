@@ -82,7 +82,7 @@
 			<div class="span3">
 				<h2 style="margin-top:-7px;">booj</h2>
 				<address>
-					575 union boulevard, suite 310<br>lakewood, colorado 80228
+					1095 s. monaco pkwy<br>denver, colorado 80224
 				</address>
 				<ul class="unstyled contact-address-list margin-bottom-30">
 					<li><span>national</span> <a href="tel://855-563-1925">855-563-1925</a></li>

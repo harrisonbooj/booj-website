@@ -8,7 +8,7 @@
                         <img src="/img/bg-footer-booj.png" alt="Booj">
                     </div>
                     <div class="span9">
-                        <address>575 Union Boulevard, Suite 310, Lakewood, C0 80228</address>
+                        <address>1095 S. Monaco Pkwy, Denver, CO 80224</address>
                         <p><a href="tel://303-290-7440">303-290-7440</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <a href="mailto:info@booj.com" title="Email">info@booj.com</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <a href="/contact" title="Contact Us">contact us</a></p>
                     </div>
                 </div>
