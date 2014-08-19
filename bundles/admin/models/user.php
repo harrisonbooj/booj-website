@@ -250,7 +250,7 @@ class User extends Eloquent {
 
 				$groups = $user->groups;
 
-				if (!empty($groups)) {
+				if (!empty($groups) && !empty($args['groups'])) {
 					foreach ($groups as $group) {
 						$key = array_search($group->id, $args['groups']);
 						if ($key === FALSE) {
