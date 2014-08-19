@@ -66,14 +66,6 @@ class AdminAuth extends Eloquent{
     public static function create()
     {
         die();
-              
-        $data = array(
-            'name' => 'James Olson',
-            'username' => 'jamesolson',
-            'email' => 'sixfootsixdesigns@gmail.com',
-            'password' => Hash::make('sta500'),
-        );
-        $user = User::create($data);
     }
 
     protected function model()
