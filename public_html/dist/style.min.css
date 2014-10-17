@@ -7629,14 +7629,9 @@ ul.contact-address-list span {
 #investment-section #investment-section-right h4 {
   margin-top: 20px;
 }
-@media (max-width: 979px) {
-    #investment-section {
-        padding-top: 40px;
-    }
-}
 @media (max-width: 767px) {
-    #investment-section #investment-section-right {
-        padding-left: 0;
-        border: none;
-    }
+  #investment-section #investment-section-right {
+    padding-left: 0;
+    border: none;
+  }
 }
