@@ -28,7 +28,8 @@ class Wm_Home_Controller extends Wm_Base_Controller {
                                     ->setFrom(array($input['email'] => $input['full_name'] ))
                                     ->setTo(
                                         array('g@booj.com' => 'John'),
-                                        array('dyana@booj.com' => 'Dyana')
+                                        array('dyana@booj.com' => 'Dyana'),
+                                        array('harrisonw@activewebsite.com' => 'Harrison')
                                     )
                                     ->setBody($html,'text/html')
             ;

@@ -29,7 +29,7 @@
         <header class="site-header">
             <div class="container">
                 <div class="row-fluid">
-                    <div class="span8">
+                    <div class="span7">
                         <div class="navbar">
                             <div class="navbar-inner clearfix">
                                 <a href="/" class="brand"><img src="/img/booj-flame.png" alt="Booj Logo"></a>
@@ -53,7 +53,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="span2 header-social-networks visible-desktop">
+                    <div class="span3 header-social-networks visible-desktop">
                         <a href="https://www.youtube.com/boojvideo" title="Booj YouTube Page" target="_blank"><i class="bicon-white-youtube">&nbsp;</i></a>
                         <a href="https://www.facebook.com/boojers" title="Booj Facebook Page" target="_blank"><i class="bicon-white-facebook">&nbsp;</i></a>
                         <a href="https://plus.google.com/107717391600262472445" title="Booj Google Plus Page" target="_blank"><i class="bicon-white-google-plus">&nbsp;</i></a>
