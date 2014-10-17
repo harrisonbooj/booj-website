@@ -27,7 +27,8 @@ class Wm_Home_Controller extends Wm_Base_Controller {
             $message = Swift_Message::newInstance('My Email Subject')
                                     ->setFrom(array($input['email'] => $input['full_name'] ))
                                     ->setTo(
-                                        array('harrisonw@activewebsite.com' => 'Harrison')
+                                        array('g@booj.com' => 'John'),
+                                        array('dyana@booj.com' => 'Dyana')
                                     )
                                     ->setBody($html,'text/html')
             ;

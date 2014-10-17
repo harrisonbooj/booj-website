@@ -37,38 +37,38 @@
         <br />
 
         <div class="row-fluid">
-            <div class="span6 info-block"><img alt="Design" class="grayscale" src="/uploads/images/info-box-design.jpg" />
+            <div class="span6 info-block"><img alt="Design" class="grayscale" src="/img/wm/info-box-design.jpg" />
                 <h3>design</h3>
             </div>
 
-            <div class="span6 info-block"><img alt="Training" class="grayscale" src="/uploads/images/info-box-training.jpg" />
+            <div class="span6 info-block"><img alt="Training" class="grayscale" src="/img/wm/info-box-training.jpg" />
                 <h3>training</h3>
             </div>
         </div>
 
         <div class="row-fluid">
-            <div class="span6 info-block"><img alt="Advanced ROI Metrics" class="grayscale" src="/uploads/images/info-box-metrics.jpg" />
+            <div class="span6 info-block"><img alt="Advanced ROI Metrics" class="grayscale" src="/img/wm/info-box-metrics.jpg" />
                 <h3>advanced ROI metrics</h3>
             </div>
 
-            <div class="span6 info-block"><img alt="Web Solutions" class="grayscale" src="/uploads/images/info-box-web.jpg" />
+            <div class="span6 info-block"><img alt="Web Solutions" class="grayscale" src="/img/wm/info-box-web.jpg" />
                 <h3>web solutions</h3>
             </div>
         </div>
 
         <div class="row-fluid">
-            <div class="span6 info-block"><img alt="Mobile Solutions" class="grayscale" src="/uploads/images/info-box-mobile.jpg" />
+            <div class="span6 info-block"><img alt="Mobile Solutions" class="grayscale" src="/img/wm/info-box-mobile.jpg" />
                 <h3>mobile solutions</h3>
             </div>
 
-            <div class="span6 info-block"><img alt="Video" class="grayscale" src="/uploads/images/info-box-video.jpg" />
+            <div class="span6 info-block"><img alt="Video" class="grayscale" src="/img/wm/info-box-video.jpg" />
                 <h3>video</h3>
             </div>
         </div>
     </div>
     <div id="investment-section-right" class="span4">
         <h3>to receive more information, complete the form below</h3>
-        <p>alternatively, you can email WM@booj.com or call 800-976-9300.</p>
+        <p>alternatively, you can email <a href="mailto:WM@booj.com">WM@booj.com</a> or call 800-976-9300.</p>
     	<?php
     		$success_message = Session::get('success_message');
 	    	if ($success_message) {
@@ -107,116 +107,154 @@
             <h4>I would like more information about:</h4>
             <div class="control-group">
                 <div class="controls">
-                    <?=Form::checkbox('training_course', Input::old('training_course')); ?>
-                    <?=Form::label('training_course', 'available online training courses', array('class' => 'control-label')); ?>
+                    <label>
+                        <?=Form::checkbox('training_course', Input::old('training_course')); ?>
+                        available online training courses
+                    </label>
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <?=Form::checkbox('compliance_training', Input::old('compliance_training')); ?>
-                    <?=Form::label('compliance_training', 'compliance training', array('class' => 'control-label')); ?>
+                    <label>
+                        <?=Form::checkbox('compliance_training', Input::old('compliance_training')); ?>
+                        compliance training
+                    </label>
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <?=Form::checkbox('copywriting', Input::old('copywriting')); ?>
-                    <?=Form::label('copywriting', 'copywriting', array('class' => 'control-label')); ?>
+                    <label>
+                        <?=Form::checkbox('copywriting', Input::old('copywriting')); ?>
+                        copywriting
+                    </label>
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <?=Form::checkbox('promotional_items', Input::old('promotional_items')); ?>
-                    <?=Form::label('promotional_items', 'custom promotional items', array('class' => 'control-label')); ?>
+                    <label>
+                        <?=Form::checkbox('promotional_items', Input::old('promotional_items')); ?>
+                        custom promotional items
+                    <label>
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <?=Form::checkbox('surveys', Input::old('surveys')); ?>
-                    <?=Form::label('surveys', 'customer surveys', array('class' => 'control-label')); ?>
+                    <label>
+                        <?=Form::checkbox('surveys', Input::old('surveys')); ?>
+                        customer surveys
+                    <label>
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <?=Form::checkbox('email_marketing', Input::old('email_marketing')); ?>
-                    <?=Form::label('email_marketing', 'email marketing solutions', array('class' => 'control-label')); ?>
+                    <label>
+                        <?=Form::checkbox('email_marketing', Input::old('email_marketing')); ?>
+                        email marketing solutions
+                    </label>
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <?=Form::checkbox('fact_sheet', Input::old('fact_sheet')); ?>
-                    <?=Form::label('fact_sheet', 'facility fact sheet creation', array('class' => 'control-label')); ?>
+                    <label>
+                        <?=Form::checkbox('fact_sheet', Input::old('fact_sheet')); ?>
+                        facility fact sheet creation
+                    </label>
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <?=Form::checkbox('sales_training', Input::old('sales_training')); ?>
-                    <?=Form::label('sales_training', 'IAM/sales training', array('class' => 'control-label')); ?>
+                    <label>
+                        <?=Form::checkbox('sales_training', Input::old('sales_training')); ?>
+                        IAM/sales training
+                    </label>
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <?=Form::checkbox('lead_generation', Input::old('lead_generation')); ?>
-                    <?=Form::label('lead_generation', 'lead generation', array('class' => 'control-label')); ?>
+                    <label>
+                        <?=Form::checkbox('lead_generation', Input::old('lead_generation')); ?>
+                        lead generation
+                    </label>
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <?=Form::checkbox('new_service_promotion', Input::old('new_service_promotion')); ?>
-                    <?=Form::label('new_service_promotion', 'new service promotion', array('class' => 'control-label')); ?>
+                    <label>
+                        <?=Form::checkbox('new_service_promotion', Input::old('new_service_promotion')); ?>
+                        new service promotion
+                    </label>
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <?=Form::checkbox('rcra_training', Input::old('rcra_training')); ?>
-                    <?=Form::label('rcra_training', 'RCRA training', array('class' => 'control-label')); ?>
+                    <label>
+                        <?=Form::checkbox('rcra_training', Input::old('rcra_training')); ?>
+                        RCRA training
+                    </label>
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <?=Form::checkbox('service_brochure', Input::old('service_brochure')); ?>
-                    <?=Form::label('service_brochure', 'service brochure creation', array('class' => 'control-label')); ?>
+                    <label>
+                        <?=Form::checkbox('service_brochure', Input::old('service_brochure')); ?>
+                        service brochure creation
+                    </label>
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <?=Form::checkbox('signage', Input::old('signage')); ?>
-                    <?=Form::label('signage', 'signage', array('class' => 'control-label')); ?>
+                    <label>
+                        <?=Form::checkbox('signage', Input::old('signage')); ?>
+                        signage
+                    </label>
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <?=Form::checkbox('open_close_tools', Input::old('open_close_tools')); ?>
-                    <?=Form::label('open_close_tools', 'site open and closure tools', array('class' => 'control-label')); ?>
+                    <label>
+                        <?=Form::checkbox('open_close_tools', Input::old('open_close_tools')); ?>
+                        site open and closure tools
+                    </label>
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <?=Form::checkbox('site_emails', Input::old('site_emails')); ?>
-                    <?=Form::label('site_emails', 'site-specific emails', array('class' => 'control-label')); ?>
+                    <label>
+                        <?=Form::checkbox('site_emails', Input::old('site_emails')); ?>
+                        site-specific emails
+                    </label>
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <?=Form::checkbox('tradeshow_support', Input::old('tradeshow_support')); ?>
-                    <?=Form::label('tradeshow_support', 'tradeshow materials and support', array('class' => 'control-label')); ?>
+                    <label>
+                        <?=Form::checkbox('tradeshow_support', Input::old('tradeshow_support')); ?>
+                        tradeshow materials and support
+                    </label>
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <?=Form::checkbox('video', Input::old('video')); ?>
-                    <?=Form::label('video', 'video production', array('class' => 'control-label')); ?>
+                    <label>
+                        <?=Form::checkbox('video', Input::old('video')); ?>
+                        video production
+                    </label>
                 </div>
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <?=Form::checkbox('web_tools', Input::old('web_tools')); ?>
-                    <?=Form::label('web_tools', 'web solutions and tools', array('class' => 'control-label')); ?>
+                    <label>
+                        <?=Form::checkbox('web_tools', Input::old('web_tools')); ?>
+                        web solutions and tools
+                    </label>
                 </div>
             </div>
             <div class="control-group">
-                <?=Form::checkbox('other', Input::old('other')); ?>
-                <?=Form::label('other', 'other', array('class' => 'control-label')); ?>
-                <div class="controls">
+                <label id="other">
+                    <?=Form::checkbox('other', Input::old('other')); ?>
+                    other
+                </label>
+                <div id="other" class="controls">
                     <?=Form::text('other', Input::old('other'), array('class' => 'span12', 'placeholder' => 'other items')); ?>
                 </div>
             </div>

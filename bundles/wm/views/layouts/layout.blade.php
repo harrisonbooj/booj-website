@@ -26,20 +26,41 @@
         @yield('styles')
     </head>
     <body class="blog-layout">
-        <header id="blog-header">
+        <header class="site-header">
             <div class="container">
                 <div class="row-fluid">
-                    <div class="span5 clearfix">
-                        <a href="/" class="blog-flame pull-left"><img src="/img/booj-flame.png" alt="Booj Logo"></a>
-                        <a href="/" class="blog-back-home pull-left"><i class="bicon-previous"></i> Back to booj</a>
+                    <div class="span8">
+                        <div class="navbar">
+                            <div class="navbar-inner clearfix">
+                                <a href="/" class="brand"><img src="/img/booj-flame.png" alt="Booj Logo"></a>
+                                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                                    Main Menu
+                                </button>
+                                <div class="nav-collapse">
+                                    <ul class="nav">
+                                        <li><a href="/"><span>home</span></a></li>
+                                        <li><a href="/blog"><span>blog</span></a></li>
+                                        <li class="active"><a href="#"><span>wm</span></a></li>
+                                        <li class="hidden-desktop"><a href="/contact" title="Contact us"><span>Contact Us</span></a></li>
+                                        <li class="hidden-desktop clearfix">
+                                            <a href="https://www.youtube.com/boojvideo" title="Booj YouTube Page" target="_blank" style="float:left;"><i class="bicon-white-youtube">&nbsp;</i></a>
+                                            <a href="https://www.facebook.com/boojers" title="Booj Facebook Page" target="_blank" style="float:left;"><i class="bicon-white-facebook">&nbsp;</i></a>
+                                            <a href="https://plus.google.com/107717391600262472445" title="Booj Google Plus Page" target="_blank" style="float:left;"><i class="bicon-white-google-plus">&nbsp;</i></a>
+                                            <a href="http://www.twitter.com/boojers" title="Booj Twitter Page" target="_blank" style="float:left;"><i class="bicon-white-twitter">&nbsp;</i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="span4 blog-header-social clearfix hidden-phone">
+                    <div class="span2 header-social-networks visible-desktop">
                         <a href="https://www.youtube.com/boojvideo" title="Booj YouTube Page" target="_blank"><i class="bicon-white-youtube">&nbsp;</i></a>
                         <a href="https://www.facebook.com/boojers" title="Booj Facebook Page" target="_blank"><i class="bicon-white-facebook">&nbsp;</i></a>
                         <a href="https://plus.google.com/107717391600262472445" title="Booj Google Plus Page" target="_blank"><i class="bicon-white-google-plus">&nbsp;</i></a>
                         <a href="http://www.twitter.com/boojers" title="Booj Twitter Page" target="_blank"><i class="bicon-white-twitter">&nbsp;</i></a>
                     </div>
-                    <div class="span3">
+                    <div class="span2 header-contact visible-desktop">
+                        <a href="/contact" title="Contact us">Contact Us</a>
                     </div>
                 </div>
             </div>

@@ -7568,6 +7568,9 @@ ul.contact-address-list span {
     position: static;
   }
 }
+#investment-section {
+  padding-top: 120px;
+}
 #investment-section h3,
 #investment-section h4 {
   text-transform: none;
@@ -7605,6 +7608,9 @@ ul.contact-address-list span {
 #investment-section #investment-section-right label {
   display: inline;
 }
+#investment-section #investment-section-right #other {
+  margin-top: 5px;
+}
 #investment-section #investment-section-right .hidden {
   display: none;
 }
@@ -7616,9 +7622,6 @@ ul.contact-address-list span {
 }
 #investment-section #investment-section-right input[type="submit"] {
   margin-top: 10px;
-}
-#investment-section #investment-section-right #other {
-  margin-top: 5px;
 }
 #investment-section #investment-section-right h3 {
   margin-top: 0;
