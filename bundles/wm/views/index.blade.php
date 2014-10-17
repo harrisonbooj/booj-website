@@ -1,4 +1,4 @@
-@layout('layouts.main')
+@layout('wm::layouts.layout')
 
 @section('page_title')
 @if (!empty($page_data->meta_title))
@@ -69,7 +69,12 @@
     <div id="investment-section-right" class="span4">
         <h3>to receive more information, complete the form below</h3>
         <p>alternatively, you can email WM@booj.com or call 800-976-9300.</p>
-
+    	<?php
+    		$success_message = Session::get('success_message');
+	    	if ($success_message) {
+	    		echo '<div class="alert alert-block alert-success">' . $success_message . '</div>';
+	    	}
+    	?>
         <?=Form::open(null, null, array('class' => '') ); ?>
             <h4>contact info:</h4>
             <div class="control-group {{ isset($errors) && $errors->has('full_name') ? 'error' : '' }}">

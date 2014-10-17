@@ -7080,70 +7080,6 @@ ul.contact-address-list span {
 .booj-career-hero .carousel-control {
   top: 50%;
 }
-#investment-section h3,
-#investment-section h4 {
-  text-transform: none;
-}
-#investment-section h3 {
-  line-height: 30px;
-}
-#investment-section .info-block {
-  position: relative;
-  margin-bottom: 30px;
-}
-#investment-section .info-block h3 {
-  position: absolute;
-  bottom: 0;
-  padding: 15px;
-  left: 0;
-  right: 0;
-  background: #ed1c24;
-  color: #ffffff;
-  font-size: 24px;
-  line-height: 24px;
-  margin: 0;
-  text-transform: none;
-  max-width: 340px;
-  display: block;
-}
-#investment-section #investment-section-right {
-  margin-top: 10px;
-  padding-left: 30px;
-  border-left: 1px solid #bbbbbb;
-}
-#investment-section #investment-section-right form {
-  margin-bottom: 0;
-}
-#investment-section #investment-section-right label {
-  display: inline;
-}
-#investment-section #investment-section-right .hidden {
-  display: none;
-}
-#investment-section #investment-section-right .control-group {
-  margin-bottom: 5px;
-}
-#investment-section #investment-section-right input[type="checkbox"] {
-  margin: -1px 3px 0 0;
-}
-#investment-section #investment-section-right input[type="submit"] {
-  margin-top: 10px;
-}
-#investment-section #investment-section-right #other {
-  margin-top: 5px;
-}
-#investment-section #investment-section-right h3 {
-  margin-top: 0;
-}
-#investment-section #investment-section-right h4 {
-  margin-top: 20px;
-}
-@media (max-width: 767px) {
-  #investment-section #investment-section-right {
-    padding-left: 0;
-    border: none;
-  }
-}
 #blog-header {
   color: #ffffff;
   background: #ed1c24;
@@ -7630,5 +7566,69 @@ ul.contact-address-list span {
   }
   #post-page .addthis_toolbox {
     position: static;
+  }
+}
+#investment-section h3,
+#investment-section h4 {
+  text-transform: none;
+}
+#investment-section h3 {
+  line-height: 30px;
+}
+#investment-section .info-block {
+  position: relative;
+  margin-bottom: 30px;
+}
+#investment-section .info-block h3 {
+  position: absolute;
+  bottom: 0;
+  padding: 15px;
+  left: 0;
+  right: 0;
+  background: #ed1c24;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 24px;
+  margin: 0;
+  text-transform: none;
+  max-width: 340px;
+  display: block;
+}
+#investment-section #investment-section-right {
+  margin-top: 10px;
+  padding-left: 30px;
+  border-left: 1px solid #bbbbbb;
+}
+#investment-section #investment-section-right form {
+  margin-bottom: 0;
+}
+#investment-section #investment-section-right label {
+  display: inline;
+}
+#investment-section #investment-section-right .hidden {
+  display: none;
+}
+#investment-section #investment-section-right .control-group {
+  margin-bottom: 5px;
+}
+#investment-section #investment-section-right input[type="checkbox"] {
+  margin: -1px 3px 0 0;
+}
+#investment-section #investment-section-right input[type="submit"] {
+  margin-top: 10px;
+}
+#investment-section #investment-section-right #other {
+  margin-top: 5px;
+}
+#investment-section #investment-section-right h3 {
+  margin-top: 0;
+}
+#investment-section #investment-section-right h4 {
+  margin-top: 20px;
+}
+@media (max-width: 767px) {
+  #investment-section #investment-section-right {
+    padding-left: 0;
+    border: none;
   }
 }
