@@ -31,9 +31,12 @@
 
         <h3>when you are short on time and resources, call booj</h3>
 
-        <p>If you are needing a marketing partner who can provide you with advanced reporting metrics informing you of where you are making the biggest impact call booj.</p>
+        <p>For over a decade, Waste Management has turned to booj for integrated marketing campaigns, online tools and training. We are the power behind WMSolutions.com and not only manage the integrated workflow of over $1.4 billion in revenue, but have increased efficiencies through technology enhancements.</p>
 
-        <p>Since 2014, Waste Management has continued to turn to booj (formerly Active Website) for various marketing efforts, online tools and training due to our ability to track results. booj is a technical marketing firm with a passion for new technology and innovation working to help you reach more customers and increase their lifetime investment. Armed with the knowledge of backend programming, web trends, design, SEO strategies, content writing and marketing booj can assist you with any project including:</p>
+        <p><a href="//fast.wistia.net/embed/iframe/gz52zw2q7o?popover=true" class="wistia-popover[height=360,playerColor=7b796a,width=640]">Watch how booj has made an impact on WMSolutions.com's bottom line.</a>
+           <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/popover-v1.js"></script></p>
+
+        <p>booj is a technical marketing firm with a passion for new technology, innovation and tracking metrics. Armed with the knowledge of backend programming, web trends, design, search engine optimization strategies, content writing and marketing booj can assist you with any project including:</p>
         <br />
 
         <div class="row-fluid">
@@ -67,8 +70,8 @@
         </div>
     </div>
     <div id="investment-section-right" class="span4">
-        <h3>to receive more information, complete the form below</h3>
-        <p>alternatively, you can email <a href="mailto:WM@booj.com">WM@booj.com</a> or call 800-976-9300.</p>
+        <h3>receive more information, <br />call 855-976-9300</h3>
+        <p>email <a href="mailto:WM@booj.com">WM@booj.com</a> or complete our form.</p>
     	<?php
     		$success_message = Session::get('success_message');
 	    	if ($success_message) {

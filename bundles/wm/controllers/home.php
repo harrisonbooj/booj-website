@@ -24,12 +24,10 @@ class Wm_Home_Controller extends Wm_Base_Controller {
             $args['form_data'] = $input;
             $html = View::make('wm::contact.contact', $args);
             $mailer = IoC::resolve('mailer');
-            $message = Swift_Message::newInstance('My Email Subject')
+            $message = Swift_Message::newInstance('Information Request Form')
                                     ->setFrom(array($input['email'] => $input['full_name'] ))
                                     ->setTo(
-                                        array('g@booj.com' => 'John'),
-                                        array('dyana@booj.com' => 'Dyana'),
-                                        array('harrisonw@activewebsite.com' => 'Harrison')
+                                        array('g@booj.com' => 'John', 'dyana@booj.com' => 'Dyana', 'harrisonw@activewebsite.com' => 'Harrison')
                                     )
                                     ->setBody($html,'text/html')
             ;

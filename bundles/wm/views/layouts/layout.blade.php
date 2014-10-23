@@ -37,7 +37,7 @@
                                     Main Menu
                                 </button>
                                 <div class="nav-collapse">
-                                    <ul class="nav">
+                                    <ul class="nav" id="js-menu">
                                         <li><a href="/"><span>home</span></a></li>
                                         <li><a href="/blog"><span>blog</span></a></li>
                                         <li class="active"><a href="#"><span>wm</span></a></li>
