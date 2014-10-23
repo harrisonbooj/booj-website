@@ -40,31 +40,31 @@
         <br />
 
         <div class="row-fluid">
-            <div class="span6 info-block"><img alt="Design" class="grayscale" src="/img/wm/info-box-design.jpg" />
+            <div class="span6 info-block"><img alt="Design" class="grayscale_static"" src="/img/wm/info-box-design.jpg" />
                 <h3>design</h3>
             </div>
 
-            <div class="span6 info-block"><img alt="Training" class="grayscale" src="/img/wm/info-box-training.jpg" />
+            <div class="span6 info-block"><img alt="Training" class="grayscale_static"" src="/img/wm/info-box-training.jpg" />
                 <h3>training</h3>
             </div>
         </div>
 
         <div class="row-fluid">
-            <div class="span6 info-block"><img alt="Advanced ROI Metrics" class="grayscale" src="/img/wm/info-box-metrics.jpg" />
+            <div class="span6 info-block"><img alt="Advanced ROI Metrics" class="grayscale_static"" src="/img/wm/info-box-metrics.jpg" />
                 <h3>advanced ROI metrics</h3>
             </div>
 
-            <div class="span6 info-block"><img alt="Web Solutions" class="grayscale" src="/img/wm/info-box-web.jpg" />
+            <div class="span6 info-block"><img alt="Web Solutions" class="grayscale_static" src="/img/wm/info-box-web.jpg" />
                 <h3>web solutions</h3>
             </div>
         </div>
 
         <div class="row-fluid">
-            <div class="span6 info-block"><img alt="Mobile Solutions" class="grayscale" src="/img/wm/info-box-mobile.jpg" />
+            <div class="span6 info-block"><img alt="Mobile Solutions" class="grayscale_static"" src="/img/wm/info-box-mobile.jpg" />
                 <h3>mobile solutions</h3>
             </div>
 
-            <div class="span6 info-block"><img alt="Video" class="grayscale" src="/img/wm/info-box-video.jpg" />
+            <div class="span6 info-block"><img alt="Video" class="grayscale_static"" src="/img/wm/info-box-video.jpg" />
                 <h3>video</h3>
             </div>
         </div>
