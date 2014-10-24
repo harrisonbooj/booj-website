@@ -7635,3 +7635,8 @@ ul.contact-address-list span {
     border: none;
   }
 }
+@media (max-width: 979px) {
+  #investment-section {
+    padding-top: 25px;
+  }
+}
